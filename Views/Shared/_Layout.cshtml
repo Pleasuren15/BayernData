@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BayernData - @ViewBag.Title</title>
+    <link rel="stylesheet" asp-href-include="/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" asp-href-include="/styles/custom1.css" />
+    <link rel="stylesheet" asp-href-include="/lib/font-awesome/css/all.css" />
+
+</head>
+<body>
+    <div class="container-fluid bg-danger sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-md justify-content-between">
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand">
+                    <img src="https://api.sofascore.com/api/v1/team/2672/image" alt="Bayern Logo" />
+                </a>
+                <div>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse"
+                            data-target="#MyNavBar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="MyNavBar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Matches</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Players</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Allianz Arena</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <div class="container-fluid footer bg-danger">
+        <div class="container">
+            <div class="footer-socials d-flex justify-content-center">
+                <div class="footer-circle">
+                    <a href=" http://fcb.de/shoptwitter.com/FCBayernENinstagram.com/fcbayernyoutube.com/fcbayern" target="_blank">
+                        <i class="fas fa-shopping-cart text-light"></i>
+                    </a>
+                </div>
+                <div class="footer-circle">
+                    <a href="https://www.facebook.com/fcbayern.en/" target="_blank">
+                        <i class="fab fa-facebook-f text-light"></i>
+                    </a>
+                </div>
+                <div class="footer-circle">
+                    <a href="https://twitter.com/FCBayernEN?s=20" target="_blank">
+                        <i class="fab fa-twitter text-light"></i>
+                    </a>
+                </div>
+                <div class="footer-circle">
+                    <a href="https://www.instagram.com/fcbayern/" target="_blank">
+                        <i class="fab fa-instagram text-light"></i>
+                    </a>
+                </div>
+                <div class="footer-circle">
+                    <a href="https://www.youtube.com/user/fcbayern" target="_blank">
+                        <i class="fab fa-youtube text-light"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="small text-center text-light">
+                &copy;Copyright 2021, This site was created for the purpose of practice in web development &amp; not for commercial use
+            </p>
+        </div>
+    </div>
+
+
+    <script asp-src-include="/lib/jquery/jquery.slim.min.js"></script>
+    <script asp-src-include="/lib/popper.js/popper.min.js"></script>
+    <script asp-src-include="/lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
