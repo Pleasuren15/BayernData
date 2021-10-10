@@ -1,0 +1,51 @@
+﻿@model List<TeamRank>
+
+@{
+    ViewData["Title"] = "Table";
+}
+
+<div class="container">
+    <div class="site-results">
+        <h3>TABLE</h3>
+        <hr />
+        <p>
+            View Bayern Munich's League Standings <span class="fw-bold">2021-2022 season</span>
+        </p>
+    </div>
+
+    <div class="site-table">
+        <div class="site-table-row">
+            <h6 class="text-center">Position</h6>
+            <h6>Team</h6>
+            <h6 class="text-center">P</h6>
+            <h6 class="text-center">W</h6>
+            <h6 class="text-center">D</h6>
+            <h6 class="text-center">L</h6>
+            <h6 class="text-center">GF</h6>
+            <h6 class="text-center">GA</h6>
+            <h6 class="text-center">GD</h6>
+            <h6 class="text-center">Pts</h6>
+            <h6 class="text-center">Form</h6>
+        </div>
+
+        <div class="site-table-striped">
+
+            @foreach (var item in Model)
+            {
+                <div class="site-table-row">
+                    <p class="text-center fw-bold">@item.Rank</p>
+                    <p><img src="@item.TeamBadge" />&nbsp;@item.TeamName </p>
+                    <p class="text-center">@item.P</p>
+                    <p class="text-center">@item.W</p>
+                    <p class="text-center">@item.D</p>
+                    <p class="text-center">@item.L</p>
+                    <p class="text-center">@item.GF</p>
+                    <p class="text-center">@item.GA</p>
+                    <p class="text-center">@item.GD</p>
+                    <p class="text-center fw-bold">@item.Pts</p>
+                    <p class="text-center">@item.Form</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

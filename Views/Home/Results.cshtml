@@ -1,0 +1,39 @@
+﻿@model List<Match>
+
+@{
+    ViewData["Title"] = "Results";
+}
+
+<div class="container">
+    <div class="site-results">
+        <h3>MATCH RESULTS</h3>
+        <hr />
+        <p>
+            View Bayern Munich's last 5 home matches from competitions they took part in
+        </p>
+    </div>
+
+    @foreach (Match item in Model)
+    {
+        <div class="site-single-match">
+            <p class="text-center small mb-0 hand-writing">@item.Venue • @item.Time, @item.Date</p>
+            <div class="site-single-match-hr"></div>
+            <h5 class="text-center hand-writing">FULL-TIME</h5>
+            <div class="d-flex justify-content-center">
+                <div class="d-flex  align-items-center">
+                    @*<h2 class="anton">@item.HomeTeam.TeamName</h2>*@
+                    <img class="anton" src="@item.HomeTeam.TeamLogoUrl" width="100" height="100" />
+                    <h1 class="text-center hand-writing m-4">@item.HomeTeam.TeamScore</h1>
+                </div>
+                <div class="d-flex justify-content-center align-items-center m-4">
+                    <h1 class="text-center hand-writing">-</h1>
+                </div>
+                <div class="d-flex  align-items-center">
+                    <h1 class="text-center hand-writing m-4">@item.AwayTeam.TeamScore</h1>
+                    <img class="anton" src="@item.AwayTeam.TeamLogoUrl" width="100" height="100" />
+                    @*<h2 class="anton">@item.AwayTeam.TeamName</h2>*@
+                </div>
+            </div>
+        </div>
+    }
+</div>
