@@ -1,0 +1,49 @@
+﻿@model Staff
+
+@{
+    ViewData["Title"] = "Add Staff";
+}
+
+<partial name="_NavBarPartial" />
+
+<div class="container">
+    <h3 class="admin-h3">ADMIN PAGE</h3>
+    <p class=lead>This page allows you to add players &amp; coaching staff of Bayern Munich rather than using an API</p>
+    <hr />
+
+    <form class="mb-2">
+        <div class="my-row">
+            <label class=" col-form-label fw-bold" asp-for="@Model.StaffFirstName"></label>
+            <input class=" form-control" asp-for="@Model.StaffFirstName" placeholder="e.g Robert" />
+        </div>
+        <div class="my-row">
+            <label class=" col-form-label fw-bold" asp-for="@Model.StaffLastName"></label>
+            <input class=" form-control" asp-for="@Model.StaffLastName" placeholder="e.g Lewandowski" />
+        </div>
+        <div class="my-row">
+            <label class=" col-form-label fw-bold" asp-for="@Model.StaffKitNumber"></label>
+            <input class=" form-control" asp-for="@Model.StaffKitNumber" value="7" type="number" />
+        </div>
+        <div class="my-row">
+            <label class=" col-form-label fw-bold" asp-for="@Model.StaffImageUrl"></label>
+            <input class=" form-control" asp-for="@Model.StaffImageUrl" placeholder="e.g data:image/jpeg..." />
+        </div>
+        <div class="my-row">
+            <label class=" col-form-label fw-bold" asp-for="@Model.StaffPosition"></label>
+            <select class="form-select" asp-for="@Model.StaffPosition">
+                <option value="Goalkeeper">Goalkeeper</option>
+                <option value="Defender">Defender</option>
+                <option value="Midfielder">Midfielder</option>
+                <option value="Foward">Foward</option>
+                <option value="Coach">Coach</option>
+                <option value="Board">Board</option>
+            </select>
+        </div>
+        <div class="justify-content-end">
+            <button class="btn btn-info" type="submit">Add</button>
+            <button class="btn btn-danger" type="reset">Reset</button>
+        </div>
+    </form>
+</div>
+
+<partial name="_FooterPartial" />

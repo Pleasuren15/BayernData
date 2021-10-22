@@ -4,6 +4,8 @@
     ViewData["Title"] = "Table";
 }
 
+<partial name="_NavBarPartial" />
+
 <div class="container">
     <div class="site-results">
         <h3>TABLE</h3>
@@ -13,39 +15,42 @@
         </p>
     </div>
 
-    <div class="site-table">
-        <div class="site-table-row">
-            <h6 class="text-center">Position</h6>
-            <h6>Team</h6>
-            <h6 class="text-center">P</h6>
-            <h6 class="text-center">W</h6>
-            <h6 class="text-center">D</h6>
-            <h6 class="text-center">L</h6>
-            <h6 class="text-center">GF</h6>
-            <h6 class="text-center">GA</h6>
-            <h6 class="text-center">GD</h6>
-            <h6 class="text-center">Pts</h6>
-            <h6 class="text-center">Form</h6>
-        </div>
+    <table class="site-table table table-sm table-borderless">
+        <thead>
+            <tr class="site-table-row">
+                <th class="text-center">Position</th>
+                <th>Team</th>
+                <th class="text-center">P</th>
+                <th class="text-center">W</th>
+                <th class="text-center">D</th>
+                <th class="text-center">L</th>
+                <th class="text-center">GF</th>
+                <th class="text-center">GA</th>
+                <th class="text-center">GD</th>
+                <th class="text-center">Pts</th>
+                <th class="text-center">Form</th>
+            </tr>
+        </thead>
 
-        <div class="site-table-striped">
-
+        <tbody class="site-table-striped">
             @foreach (var item in Model)
             {
-                <div class="site-table-row">
-                    <p class="text-center fw-bold">@item.Rank</p>
-                    <p><img src="@item.TeamBadge" />&nbsp;@item.TeamName </p>
-                    <p class="text-center">@item.P</p>
-                    <p class="text-center">@item.W</p>
-                    <p class="text-center">@item.D</p>
-                    <p class="text-center">@item.L</p>
-                    <p class="text-center">@item.GF</p>
-                    <p class="text-center">@item.GA</p>
-                    <p class="text-center">@item.GD</p>
-                    <p class="text-center fw-bold">@item.Pts</p>
-                    <p class="text-center">@item.Form</p>
-                </div>
+                <tr class="site-table-row">
+                    <td class="text-center fw-bold">@item.Rank</td>
+                    <td><img src="@item.TeamBadge" height="25" width="25" />&nbsp;@item.TeamName </td>
+                    <td class="text-center">@item.P</td>
+                    <td class="text-center">@item.W</td>
+                    <td class="text-center">@item.D</td>
+                    <td class="text-center">@item.L</td>
+                    <td class="text-center">@item.GF</td>
+                    <td class="text-center">@item.GA</td>
+                    <td class="text-center">@item.GD</td>
+                    <td class="text-center fw-bold">@item.Pts</td>
+                    <td class="text-center">@item.Form</td>
+                </tr>
             }
-        </div>
-    </div>
+        </tbody>
+    </table>
 </div>
+
+<partial name="_FooterPartial" />
