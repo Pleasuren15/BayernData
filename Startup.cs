@@ -29,6 +29,7 @@ namespace BayernData
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<IRepositoryWrapper, CRepositoryWrapper>();
 
             services.AddDbContext<AppDbContext>(options
                  => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
