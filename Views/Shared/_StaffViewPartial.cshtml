@@ -2,13 +2,11 @@
 
 <div class="player-dis">
     <div class="player-dis-num-eu">
-        <h3 class="player-dis-num" >@Model.StaffKitNumber</h3>
+        <h3 class="player-dis-num">@Model.StaffKitNumber</h3>
         @if (User.Identity.IsAuthenticated)
         {
-            <h3>
-                <a asp-controller="Admin" asp-action="Edit" asp-route-id="@Model.StaffId"><i class="fas fa-user-edit"></i></a>
-                <a asp-controller="Admin" asp-action="Delete" asp-route-id="@Model.StaffId" onclick="return confirm('Are you sure you want to delete @Model.StaffFirstName @Model.StaffLastName on your records?')"><i class="fas fa-user-minus"></i></a>
-            </h3>
+            <a class="player-dis-num" asp-controller="Admin" asp-action="Edit" asp-route-id="@Model.StaffId"><i class="fas fa-user-edit"></i></a>
+            <a class="player-dis-num" asp-controller="Admin" asp-action="Delete" asp-route-id="@Model.StaffId" onclick="return confirm('Are you sure you want to delete @Model.StaffFirstName @Model.StaffLastName on your records?')"><i class="fas fa-user-minus"></i></a>
         }
     </div>
     <div class="player-dis-img">

@@ -339,18 +339,18 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
+    margin:0 3px;
 }
 
 .player-dis-num-eu {
     position: absolute;
     font: 500 22px 'Caveat', cursive;
     font-size: 8rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    justify-content: space-between;
+    display: flex;
 }
 
     .player-dis-num-eu a {
+        text-decoration:none;
         font-size: 20px;
         color: rgb(255 203 0);
     }
