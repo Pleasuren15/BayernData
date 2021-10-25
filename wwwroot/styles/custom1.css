@@ -213,7 +213,7 @@ body {
     }
 
 .site-table-striped .site-table-row:nth-child(2n+1) {
-    background-color: rgb(124 201 251);
+    background-color: rgb(200 200 200);
 }
 
 .site-table-striped .site-table-row:nth-child(1), .site-table-striped .site-table-row:nth-child(2),
