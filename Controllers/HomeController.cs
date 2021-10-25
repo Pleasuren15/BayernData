@@ -1,4 +1,5 @@
-﻿using BayernData.Models;
+﻿using BayernData.Data;
+using BayernData.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System;
@@ -13,6 +14,12 @@ namespace BayernData.Controllers
 {
     public class HomeController : Controller
     {
+        public IRepositoryWrapper _repositoryWrapper { get; }
+
+        public HomeController(IRepositoryWrapper repositoryWrapper)
+        {
+            _repositoryWrapper = repositoryWrapper;
+        }
         public async Task<IActionResult> IndexAsync()
         {
             List<Match> lstMatches = new List<Match>();
@@ -78,6 +85,16 @@ namespace BayernData.Controllers
             return View(teams);
         }
 
+        public IActionResult Players()
+        {
+            return View(_repositoryWrapper.staffRepository.FindAll());
+        }
+        
+        public IActionResult Stadium()
+        {
+            return View();
+        }
+
         //HELPER METHODS.
         private async Task<Team> GetTeamDetailsAsync(string id, string score)
         {
@@ -104,7 +121,6 @@ namespace BayernData.Controllers
 
             return new Team(id, score, teamName, teamLogoUrl, teamKitUrl);
         }
-
         private async Task<List<TeamRank>> GetLeagueStandingsAsync()
         {
             List<TeamRank> lstRanks = new List<TeamRank>();

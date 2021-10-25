@@ -1,0 +1,32 @@
+﻿@model Staff
+
+@{
+    ViewData["Title"] = "Edit Staff";
+}
+
+<partial name="_NavBarPartial" />
+
+<div class="container">
+    <h3 class="admin-h3">EDIT STAFF</h3>
+    <p class=lead>Alter staff details</p>
+    <hr />
+
+    <form class="mb-2" asp-controller="Admin" asp-action="Edit">
+        <div asp-validation-summary="All" class="text-danger fw-bold"></div>
+
+        <input class=" form-control" asp-for="@Model.StaffId" type="hidden" />
+
+        <div class="my-row">
+            <label class=" col-form-label fw-bold" asp-for="@Model.StaffId"></label>
+            <input class=" form-control" asp-for="@Model.StaffId" disabled />
+        </div>
+
+        <partial name="_AddEditPartial" />
+        <div class="justify-content-end">
+            <button class="btn btn-info" type="submit">Update</button>
+            <a class="btn btn-danger" href="#">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<partial name="_FooterPartial" />

@@ -1,0 +1,70 @@
+﻿@model IQueryable<Staff>
+
+@{
+    ViewData["Title"] = "Team";
+}
+
+<partial name="_NavBarPartial" />
+
+<div class="to-top">
+    <a href="#top" class="text-light text-decoration-none anton">&uArr;</a>
+</div>
+
+<div class="container" id="top">
+    <div class="site-bayern-info">
+        <h3>MEET THE TEAM</h3>
+        <hr />
+        <p>From Coaching staff, players &amp; board members</p>
+    </div>
+
+    <h2 class="anton">Goalkeepers</h2>
+    <hr />
+    <div class="players-dis">
+        @foreach (var item in Model.Where(e => e.StaffPosition == "Goalkeeper"))
+        {
+            <partial name="_StaffViewPartial" model="@item" />
+        }
+    </div>
+
+    <h2 class="anton">Defenders</h2><hr />
+    <div class="players-dis">
+        @foreach (var item in Model.Where(e => e.StaffPosition == "Defender"))
+        {
+            <partial name="_StaffViewPartial" model="@item" />
+        }
+    </div>
+
+    <h2 class="anton">Midfielders</h2><hr />
+    <div class="players-dis">
+        @foreach (var item in Model.Where(e => e.StaffPosition == "Midfielder"))
+        {
+            <partial name="_StaffViewPartial" model="@item" />
+        }
+    </div>
+
+    <h2 class="anton">Fowards</h2><hr />
+    <div class="players-dis">
+        @foreach (var item in Model.Where(e => e.StaffPosition == "Foward"))
+        {
+            <partial name="_StaffViewPartial" model="@item" />
+        }
+    </div>
+
+    <h2 class="anton">Coaches</h2><hr />
+    <div class="players-dis">
+        @foreach (var item in Model.Where(e => e.StaffPosition == "Coach"))
+        {
+            <partial name="_StaffViewPartial" model="@item" />
+        }
+    </div>
+
+    <h2 class="anton">Executive Board Member</h2><hr />
+    <div class="players-dis">
+        @foreach (var item in Model.Where(e => e.StaffPosition == "Board"))
+        {
+            <partial name="_StaffViewPartial" model="@item" />
+        }
+    </div>
+</div>
+
+<partial name="_FooterPartial" />

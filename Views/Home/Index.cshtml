@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home";
 }
 
-<partial name="_NavBarPartial" />
+<partial name="_NavBarPartial"  />
 
 <div class="to-top">
     <a href="#carouselExampleControls" class="text-light text-decoration-none anton">&uArr;</a>
@@ -17,7 +17,7 @@
             <div class="carousel-caption">
                 <h2>ALLIANZ ARENA</h2>
                 <p class="lead">Learn more about Bayern's home &amp; its rich history</p>
-                <a href="#">Visit</a>
+                <a asp-controller="Home" asp-action="Stadium">Visit</a>
             </div>
         </div>
         <div class="carousel-item ">
@@ -25,7 +25,7 @@
             <div class="carousel-caption">
                 <h2>TEAM</h2>
                 <p class="lead">Get to know the team more</p>
-                <a href="#">Visit</a>
+                <a asp-controller="Home" asp-action="Players">Visit</a>
             </div>
         </div>
         <div class="carousel-item">

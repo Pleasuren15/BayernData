@@ -45,7 +45,6 @@ C:\MY STUFF\My Work\2021\BayernData\bin\Debug\netcoreapp3.1\Microsoft.Extensions
 C:\MY STUFF\My Work\2021\BayernData\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\MY STUFF\My Work\2021\BayernData\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Home\Table.cshtml.g.cs
-C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\BayernData.csproj.AssemblyReference.cache
 C:\MY STUFF\My Work\2021\BayernData\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\MY STUFF\My Work\2021\BayernData\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\MY STUFF\My Work\2021\BayernData\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
@@ -94,3 +93,9 @@ C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Lo
 C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_NavbarPartial.cshtml.g.cs
 C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_FooterPartial.cshtml.g.cs
 C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Add.cshtml.g.cs
+C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Home\Players.cshtml.g.cs
+C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_StaffViewPartial.cshtml.g.cs
+C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Home\Stadium.cshtml.g.cs
+C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AddEditPartial.cshtml.g.cs
+C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Edit.cshtml.g.cs
+C:\MY STUFF\My Work\2021\BayernData\obj\Debug\netcoreapp3.1\BayernData.csproj.AssemblyReference.cache

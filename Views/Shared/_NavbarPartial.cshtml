@@ -1,4 +1,4 @@
-﻿<div class="container-fluid bg-danger">
+﻿<div class="container-fluid bg-danger sticky-top">
     <div class="container">
         <nav class="navbar navbar-expand-md justify-content-between">
             <a asp-controller="Home" asp-action="Index" class="navbar-brand">
@@ -22,14 +22,27 @@
                             <a class="nav-link" asp-controller="Home" asp-action="Table">Table</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Players</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Players">Players</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Allianz Arena</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Stadium">Allianz Arena</a>
                         </li>
-                        <li class="nav-item bg-light">
-                            <a class="nav-link text-dark fw-bold" asp-controller="Admin" asp-action="Login">Login</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Admin" asp-action="Add">Admin</a>
+                            </li>
+                            <li class="nav-item bg-light rounded">
+                                <a class="nav-link text-dark fw-bold" asp-controller="Admin" asp-action="Logout">Logout</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item bg-light rounded">
+                                <a class="nav-link text-dark fw-bold" asp-controller="Admin" asp-action="Login">Login</a>
+                            </li>
+
+                        }
                     </ul>
                 </div>
             </div>

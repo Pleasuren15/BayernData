@@ -18,7 +18,7 @@ namespace BayernData.Models
         public string StaffLastName { get; set; }
 
         [DisplayName("Kit Number")]
-        public int StaffKitNumber { get; set; }
+        public string StaffKitNumber { get; set; }
 
         [Required]
         [DisplayName("Image Url")]
